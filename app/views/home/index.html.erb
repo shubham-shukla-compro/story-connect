@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+  <h3>Welcome <%= current_user.email %></h3>
+  <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+<% else %>
+  <%= button_to "Sign in", new_user_session_path, method: :get %>
+<% end %>
+<h1>Hello from the the PostConnect!</h1>
