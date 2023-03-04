@@ -1,0 +1,6 @@
+<% if user_signed_in? %>
+  <h3>Welcome <%= current_user.name %></h3>
+<% else %>
+  <%= button_to "Sign in", new_user_session_path, method: :get %>
+<% end %>
+<h1>Welcome to the dashboard</h1>
