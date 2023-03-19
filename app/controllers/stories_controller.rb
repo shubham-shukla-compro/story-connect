@@ -9,6 +9,7 @@ class StoriesController < ApplicationController
   # GET /stories/1 or /stories/1.json
   def show
     @story.update(views: @story.views + 1)
+    @comments = @story.comments.order(created_at: :desc)
   end
 
   # GET /stories/new
